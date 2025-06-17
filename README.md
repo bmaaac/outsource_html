@@ -1,3 +1,3 @@
 # outsource_html
 
-I built an app using a single index.htlm file, here's how it went (development in progress)
+Website mockup design for an outsourcing business, showcasing a clean, modern interface with a focus on simplicity and functionality. The design is budget-friendly, avoiding unnecessary complexity and emphasizing a straightforward, no-frills approach to client engagement and service offerings.
