@@ -1,4 +1,3 @@
-// api/app.mjs
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -6,7 +5,6 @@ import serverless from "serverless-http";
 
 const app = express();
 
-// `__dirname` for ES Modules
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 app.use(express.static("public"));
