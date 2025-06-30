@@ -32,4 +32,4 @@ app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
 });
 
-module.exports.handler = serverless(app);
+export const handler = serverless(app);
