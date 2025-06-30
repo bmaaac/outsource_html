@@ -2,6 +2,9 @@ import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 
+const express = require("express");
+const serverless = require("serverless-http");
+
 const app = express();
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -28,3 +31,5 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
 });
+
+module.exports.handler = serverless(app);
