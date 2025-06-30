@@ -1,12 +1,12 @@
+// api/app.mjs
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
-
-const express = require("express");
-const serverless = require("serverless-http");
+import serverless from "serverless-http";
 
 const app = express();
 
+// `__dirname` for ES Modules
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 app.use(express.static("public"));
@@ -23,13 +23,10 @@ app.get("/about", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "about.html"));
 });
 
+// 404 handler
 app.get("*", (req, res) => {
   res.status(404).send("404 - Not Found");
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server started on port ${PORT}`);
-});
-
+// Export the handler for serverless deployment (Vercel)
 export const handler = serverless(app);
