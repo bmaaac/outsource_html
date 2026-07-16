@@ -9,8 +9,9 @@ html,
 body {
   height: 100%;
   font-size: 18px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
@@ -98,6 +99,10 @@ nav {
   display: flex;
   margin: 0;
   list-style: none;
+}
+
+.nav-menu:visited {
+  color: inherit;
 }
 
 .nav-menu li {
@@ -766,9 +771,14 @@ footer p {
 
 /* aboveFooter */
 
-.col-footer {
+/* .col-footer {
   flex: 0 0 25%;
   text-align: center;
+} */
+.col-footer {
+  flex: 1 1 220px;
+  max-width: 280px;
+  text-align: left;
 }
 
 .col-footer h2 {
@@ -797,17 +807,26 @@ footer p {
   color: #fff;
 }
 
-.row {
+/* .row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 4rem 18rem;
+} */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
 }
 
 .icon-row {
   display: flex;
   justify-content: space-between;
-  margin: 1rem 5rem;
+  margin: 1.4rem 0rem;
 }
 .icon-row i {
   cursor: pointer;
@@ -1115,7 +1134,6 @@ h3 {
     flex: 0 0 100%;
     text-align: left;
     padding: 0;
-    margin: 1rem 0;
   }
   .col-footer p {
     margin-right: 2rem;
